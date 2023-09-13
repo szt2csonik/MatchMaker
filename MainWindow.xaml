@@ -29,13 +29,38 @@
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">Felhasználó adatok</Label>
         <Label Grid.Row="1" Grid.Column="0">Felhasználónév:</Label>
-        <Label Grid.Row="3" Grid.Column="0">Születési év:</Label>
-        <Label Grid.Row="5" Grid.Column="0">Játszott játék:</Label>
-        <Label Grid.Row="6" Grid.Column="0">Rólam:</Label>
-        <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80">Mentés</Button>
+        <Label Grid.Row="2" Grid.Column="0">Születési év:</Label>
+        <Label Grid.Row="3" Grid.Column="0">Játszott játék:</Label>
+        <Label Grid.Row="4" Grid.Column="0">Rólam:</Label>
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80">Mentés</Button>
 
         <TextBox Grid.Row="1" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding User.UserName}"></TextBox>
         <DatePicker Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" SelectedDate="{Binding User.BirthsDay}"></DatePicker>
-        <TextBox Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding User.AboutMe}"></TextBox>
+        <ComboBox Grid.Row="3" Grid.Column="1" Margin="2 2 2 2">
+            <ComboBoxItem>League of Legends</ComboBoxItem>
+            <ComboBoxItem>CS:GO</ComboBoxItem>
+            <ComboBoxItem>Valorant</ComboBoxItem>
+            <ComboBoxItem>Rainbow 6 Siege</ComboBoxItem>
+            <ComboBoxItem>Rocket league</ComboBoxItem>
+            <ComboBoxItem>Egyéb</ComboBoxItem>
+        </ComboBox>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding User.AboutMe}"></TextBox>
+        <GroupBox Grid.Row="8" Grid.ColumnSpan="2">
+            <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Margin="2 10 2 2">
+                <StackPanel Orientation="Horizontal">
+                    <Label>Felhasználónév:</Label>
+                    <Label Content="{Binding User.UserName}"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Születési év:</Label>
+                    <Label Content="{Binding User.BirthsDay}"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Rólam:</Label>
+                    <Label Content="{Binding User.AboutMe}"></Label>
+                </StackPanel>
+
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </Window>
