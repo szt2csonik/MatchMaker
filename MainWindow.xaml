@@ -22,7 +22,7 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">Diák adatok</Label>
+        <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">Felhasználó adatok</Label>
         <Label Grid.Row="1" Grid.Column="0">Felhasználónév:</Label>
         <Label Grid.Row="3" Grid.Column="0">Születési év:</Label>
         <Label Grid.Row="5" Grid.Column="0">Játszott játék:</Label>
